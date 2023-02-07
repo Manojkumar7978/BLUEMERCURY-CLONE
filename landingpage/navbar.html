@@ -6,10 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\footer.css">
+    <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\productslider.css">
+    <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\glider.min.css">
+    <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\navbar.css">
+    <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\slidshow.css">
 </head>
 
 <body>
+    <!-- popup searchbar -->
+
+
     <!-- navbar -->
     <div id="navbar">
         <div id="childdiv1">
@@ -20,9 +27,9 @@
             <div>
                 <a href=""><i class="fa-regular fa-heart"></i>
                     <p>WISHLIST</p></a>
-                <a href=""> <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>SEARCH</p>
-                </a>
+                <i id="search" class="fa-solid fa-magnifying-glass" onclick="doIt()"></i>
+                <p>SEARCH</p>
+
                 <a href=""><i class="fa-regular fa-circle-user"></i>
     <p>ACCOUNT</p></a>
                 <a href=""> <i class="fa-solid fa-bag-shopping"></i>
@@ -32,11 +39,25 @@
             </div>
         </div>
         <div id="childdiv2">
-            <a href="">
+            <a href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\navbar.html">
                 <h2>bluemercury</h2>
             </a>
         </div>
     </div>
+    <div id="myOverlay" class="overlay">
+
+        <div class="overlay-content">
+            <i id="searchIcon" class="fa-solid fa-magnifying-glass"></i>
+            <i id="closeIcon" class="fa-solid fa-xmark"></i>
+
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search" name="search">
+            </form>
+        </div>
+    </div>
+    <br>
+
+
 
     <!-- //menu bar// -->
     <div class="menubar">
@@ -259,8 +280,336 @@
 
 
 
+    <!-- slideshow1 -->
+    <div id="paragraph_slidshow" onclick="slideShow(1)">
+        <div id="slides">
+            <p>Free Shippint for Blue Reward Member</p>
+        </div>
+        <div id="slides">
+            <p>Free Sample with All Order</p>
+        </div>
+        <div id="slides">
+            <p>Free Gift with Purchase..</p>
+        </div>
+    </div>
+
+    <!-- slidshow2 -->
+    <div id="slideset">
+        <div class="picSlide">
+            <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bhm-2023-hp-hero-2_1300x.jpg?v=1675111193" alt="">
+            <div class="slide_text1">
+                <h4>BLACK HISTORY MONTH 2023</h4>
+                <h2>CELEBRATING BLACK OWNERS!</h2>
+                <p>from bandswe carry to ones we don't, a collection of osme of our favorite Black-Owned businesses</p>
+                <br>
+                <p>DISCOVER NOW</p>
+            </div>
+        </div>
+        <div class="picSlide">
+            <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/romantic-rendesvouz-hero-des_2bec8e25-a7cf-4496-b299-b6808566be42_1300x.jpg?v=1674755395" alt="">
+            <div class="slide_text2">
+                <h4>ROUTINE <span style="color: #12284c;">REBOOT</span></h4>
+                <h2>THE <br> "IT'S A DATE"
+                    <br> ROUTINE
+                </h2>
+                <p>Ignite date night (or any night) with showstopping glam. Our curated collection of beauty essentials takes the stress out of creating a sultry look</p>
+                <br>
+                <p>SHOP NOW</p>
+            </div>
+        </div>
+        <div class="picSlide">
+            <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/wide-awake-eyes-hero-des_1300x.jpg?v=1674755113" alt="">
+            <div class="slide_text3">
+                <h4>ROUTINE LUNE+ASTER</h4>
+                <h2>Wake Up Like This</h2>
+                <p>Want to make your eyes look as big, bright, and wide awake as possible? Try these!</p>
+                <br>
+                <p>SHOP NOW</p>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+
+    <div id="dot">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <section class="p-slider">
+        <h1 class="product-slider-heading">BLACK-OWNED BRANDS</h1>
+
+        <div class="slider-btns">
+            <button aria-label="Previous" class="glider-prev disabled" aria-disabled="true"><i class="fa-solid fa-chevron-left"></i></button>
+            <button aria-label="Next" class="glider-next disabled" aria-disabled="true"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="glider-contain">
+            <div class="glider draggable">
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- heroproducts -->
+
+    <div id="heroProduct1">
+        <a href="%"> <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/Lip_Plumping_Full_2022-12-20_11-02-57_A_R8_S4_1_1000x.jpg?v=1675266785" alt="">
+        </a>
+        <div>
+            <h2>Get plumper lips now</h2>
+            <p>Wait till you see what these formulas can do</p>
+            <br>
+            <a href="%">SHOP NOW</a>
+        </div>
+    </div>
+
+
+    <div id="heroProduct2">
+        <div>
+            <h3>VALENTINE'S DAY
+            </h3>
+            <h2>Say It With Fragrance
+            </h2>
+            <p>You really can't go wrong with perfume, or cologne, or scented oils....
+
+            </p>
+            <br>
+            <a href="%">SHOP NOW</a>
+        </div>
+        <a href="%"> <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/Fragrance_Gifts_Full_Blue_Mercury_2302_Alford_0367_1000x.jpg?v=1675267641" alt="">
+        </a>
+
+    </div>
+
+    <div id="heroProduct3">
+        <div>
+            <a href=""><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/Vitablast_C_Side_by_Side.jpg?v=1675268804&width=832" alt=""></a>
+            <div>
+                <h2>An advanced serum treatment
+                </h2>
+                <p>Reinforce the skin’s natural barrier to help protect against environmental stressors
+                </p>
+                <a href=""><br>
+                    <p><b class="shoplink">SHOP NOW</b></p>
+                </a>
+            </div>
+
+        </div>
+        <div>
+            <a href=""><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/Tools_Side_by_Side.jpg?v=1675269228&width=832" alt=""></a>
+            <div>
+                <h2>Own Devices
+                </h2>
+                <p>A great tool (or three) can really take your routine to the next level!
+                </p>
+                <a href=""><br>
+                    <p><b class="shoplink">SHOP NOW</b></p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- footer part -->
+    <div id="footer">
+        <div id="childfooter1">
+            <a href="">
+                <div>
+                    <i class="fa-solid fa-gift"></i>
+                    <br>
+                    <p>Free Gifts</p>
+                    <br>
+                    <p>Qualifying brand purchases come with presents!</p>
+                    <br>
+                    <p>View current offering</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <i class="fa-solid fa-chess-queen"></i>
+                    <br>
+                    <p>Complimentary Consultations</p>
+                    <br>
+                    <p>Visit us in store or online for beauty happenings</p>
+                    <br>
+                    <p>Find your store</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <i class="fa-solid fa-spa"></i>
+                    <br>
+                    <p>Bluemercury Spa</p>
+                    <br>
+                    <p>Indulge in a luxurious, customized treatment</p>
+                    <br>
+                    <p>View Spa Menu</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <i class="fa-solid fa-award"></i>
+                    <br>
+                    <p>Blue Rewards</p>
+                    <br>
+                    <p>Qualifying brand purchases come with presents!</p>
+                    <br>
+                    <p>View current offering</p>
+                </div>
+            </a>
+        </div>
+        <hr>
+        <div id="childfooter2">
+            <div>
+                <h5>Get Expert Beauth Insight & Offers </h5>
+                <br>
+                <input type="text" id="email" placeholder="Email Address">
+                <br>
+                <p>By continuing, you agree to Bluemercury's</p>
+                <br>
+                <p style="text-decoration: underline;">Privacy Practices</p>
+                <br>
+                <div class="social">
+                    <a href="https://twitter.com/bluemercury" target="blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.pinterest.com/bluemercury/" target="blank"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="https://www.facebook.com/bluemercury/" target="blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/bluemercury/" target="blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCrgUXfV7IIFllEQMbzd9J3A" target="blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <h6>Copyright 2023 bluemercury. All Rights Reserved.</h6>
+            </div>
+
+            <div>
+                <div>
+
+                    <h5>BLUEMERCURY</h5>
+                    <a href=""> Our Company</a>
+                    <a href="">Store Locator</a>
+                    <a href="">In store & online events</a>
+                    <a href=""> Spa Menu</a>
+                    <a href="">Careers</a>
+                    <a href=""> Vendors Submission</a>
+                    <a href="">Diversity & Inclusion</a>
+                </div>
+                <div>
+                    <h5>MY ACCOUNT</h5>
+                    <a href="">My Account</a>
+                    <a href="">Blue Rewards</a>
+                    <a href="">Giftcard Balance Checker</a>
+                </div>
+                <div>
+                    <h5>CUSTOMER SERVICES</h5>
+                    <a href="">Contact Us</a>
+                    <a href="">Help & FAQ</a>
+                    <a href="">Shipint Return & Eschange</a>
+                    <a href="">Gift Card</a>
+                    <a href="">Offer & Promotion</a>
+                    <a href="">Klarna</a>
+                </div>
+                <div>
+                    <h5>RESOURCES</h5>
+                    <a href="">Terms & Condition</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Do not sell or Share My personal Information</a>
+                    <a href="">CA Privacy Rights</a>
+                    <a href="">Accesibility</a>
+                    <a href="">Affilate Program</a>
+                    <a href="">Cookie Preference</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </body>
-<script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
 
 </html>
+<script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function slideShow(n) {
+        showSlides(slideIndex += n)
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.querySelectorAll("#slides")
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "flex"
+    }
+    let dotIndex = 1;
+
+    function currentSlide(n) {
+        dotSlide(dotIndex = n);
+    }
+
+    function dotSlide(n) {
+        let i;
+        let slides = document.querySelectorAll(".picSlide")
+        let dots = document.querySelectorAll(".dot")
+        console.log(slides[0])
+        if (n > slides.length) {
+            dotIndex = 1
+        }
+        if (n < 1) {
+            dotIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[dotIndex - 1].style.display = "block";
+        dots[dotIndex - 1].className += " active";
+    }
+</script>
+
+<script src="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\script\productarray.js"></script>
+<script>
+    // slidingProduct1
+    displayFirstGlider(productArray)
+</script>
+<script src="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\script\glider.min.js"></script>
+
+<script>
+    new Glider(document.querySelector('.glider'), {
+        slidesToScroll: 1,
+        slidesToShow: 4,
+        draggable: true,
+        dots: '.dots',
+        arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next'
+        }
+    });
+
+    function doIt() {
+        document.querySelector(".overlay-content").style.visibility = "visible"
+        console.log("hii")
+
+
+    }
+    document.querySelector("#closeIcon").addEventListener("click", closesearch)
+
+    function closesearch() {
+        document.querySelector(".overlay-content").style.visibility = "hidden"
+
+    }
+</script>
+<script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
