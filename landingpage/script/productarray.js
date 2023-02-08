@@ -402,8 +402,12 @@ var productArray = [{
 displayFirstGlider(productArray)
 
 
+
 function displayFirstGlider() {
     productArray.map(function(ele, ind) {
+        var anchor = document.createElement("a")
+        anchor.setAttribute("href", "file:///E:/bluemercury/BLUEMERCURY-CLONE/landingpage/productDeatails.html")
+        console.log(anchor)
         var div1 = document.createElement("div")
         div1.setAttribute("class", "product-box")
         var div2 = document.createElement("div")
@@ -440,10 +444,22 @@ function displayFirstGlider() {
 
         div4.append(div5, p1, p2)
         div1.append(div2, div4)
+        anchor.append(div1)
         if (ind != 0)
-            document.querySelector(".glider").append(div1)
+            document.querySelector(".glider").append(anchor)
+        div1.addEventListener("click", function() {
+            gotoDetails(ele, ind);
+        })
     })
 
+}
+
+//go to product details page
+function gotoDetails(ele, ind) {
+    var p = []
+    p.push(ele);
+    console.log(p)
+    localStorage.setItem("product", JSON.stringify(p))
 }
 
 

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\footer.css">
     <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\productDetails.css">
 </head>
 
@@ -13,17 +14,17 @@
     <div class="product-details-container">
         <div class="product-img">
             <div>
-                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-810031550265-1_550x.jpg?v=1675361575" alt="">
+                <img id="product-img1" src="" alt="">
             </div>
             <div>
-                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-810031550265-1_550x.jpg?v=1675361575" alt="">
+                <img id="product-img2" src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-810031550265-1_550x.jpg?v=1675361575" alt="">
             </div>
         </div>
         <div class="product-details">
             <div>
                 <h3 id="brand-name">BRAND NAME</h3>
                 <div>
-                    <span>4</span><i class="fa-solid fa-star"></i>
+                    <span>4.5</span><i class="fa-solid fa-star"></i>
 
                 </div>
             </div>
@@ -42,43 +43,66 @@
         </div>
     </div>
 
+
+    <!-- product Information -->
+
     <div id="product-info">
         <h3>Product Information</h3>
         <h3 id="plus">+</h3>
         <h3 id="minus">-</h3>
     </div>
     <div id="product-info-dropdown">
-        <p id="product">product desc</p>
+        <p id="p-info-desc">product desc</p>
         <h3>UPC</h3>
         <p>810031550265</p>
         <button>VIEW CLINICAL RESULT</button>
     </div>
+
+
+    <div id="product-info2">
+        <h3>Ingredients</h3>
+        <h3 id="plus2">+</h3>
+        <h3 id="minus2">-</h3>
+    </div>
+    <div id="product-info-dropdown2">
+        <ul>
+            <li>Cloudberry Seed Oil
+            </li>
+            <li>Shea Butter
+            </li>
+            <li>Vitamin E
+            </li>
+            <li>Essential Oils
+            </li>
+        </ul>
+        <button>VIEW FULL INGREDIENTS LIST</button>
+    </div>
+
+
+    <div id="product-info3">
+        <h3>HOW TO USE</h3>
+        <h3 id="plus3">+</h3>
+        <h3 id="minus3">-</h3>
+    </div>
+    <div id="product-info-dropdown3">
+        <P>Massage into skin after bath or shower for a luxurious moisturizing experience. Our whipped skin soufflé is very concentrated so allow a few minutes for it to absorb into your skin.
+
+        </P>
+    </div>
+
+
+    <div id="product-info4">
+        <h3>REVIEW</h3>
+        <h3 id="plus4">+</h3>
+        <h3 id="minus4">-</h3>
+    </div>
+    <div id="product-info-dropdown4">
+        <span><h1>4.5</h1><h3>OUT OF 5 STARS</h3></span>
+    </div>
+
+
 </body>
 
 </html>
-<script>
-    document.getElementById("product-info").addEventListener("click", drop)
-
-    function drop() {
-        var document.get
-    }
-
-    function dropDown() {
-        document.getElementById("product-info-dropdown").style.display = "block"
-        document.getElementById("plus").style.display = "none"
-        document.getElementById("minus").style.display = "block"
-        document.getElementById("product-info").addEventListener("click", dropUp)
-
-
-    }
-
-    function dropUp() {
-        document.getElementById("product-info-dropdown").style.display = "none"
-        document.getElementById("plus").style.display = "block"
-
-        document.getElementById("minus").style.display = "none"
-
-
-    }
-</script>
+<script src="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\script\productDetails.js"></script>
 <script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
