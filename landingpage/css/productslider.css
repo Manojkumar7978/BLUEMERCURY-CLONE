@@ -8,10 +8,11 @@ a {
     text-decoration: none;
 }
 
-body {
+
+/* body {
     margin: 0;
     padding: 0;
-}
+} */
 
 .p-slider {
     display: flex;
@@ -72,7 +73,6 @@ body {
 }
 
 .p-box-text>div+p {
-    margin: auto;
     font-size: 10px
 }
 

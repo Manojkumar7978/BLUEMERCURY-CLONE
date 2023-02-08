@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\recyclebin\slider2.css">
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper">
+        <div class="product-slider-heading2">
+            <h1>NEW ARRIVALS</h1>
+        </div>
+        <div class="swiper-wrapper">
+
+            <!-- <div class="product-box2">
+                <div class="p-img-container2">
+                    <div class="p-img2">
+                        <a href="">
+                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="p-box-text2">
+                    <div class="product-category2">
+                        <span><b>BRAND</b></span>
+                    </div>
+                    <p>desc</p>
+                    <p>price</p>
+                </div>
+            </div> -->
+
+
+        </div>
+
+    </div>
+    <!-- Add Pagination -->
+
+
+    <!-- Add Arrows -->
+    <div class="swiper-button-next">
+
+    </div>
+    <div class="swiper-button-prev">
+
+    </div>
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        let appendNumber = 50;
+        let prependNumber = 1;
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 8,
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            virtual: {
+                slides: (function() {
+                    const slides = [];
+                    for (var i = 0; i < 50; i += 1) {
+                        slides.push("");
+                    }
+                    return slides;
+                })(),
+            },
+        });
+    </script>
+
+    <!-- <script src="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\script\productarray.js"></script> -->
+
+    <script src="E:\bluemercury\BLUEMERCURY-CLONE\recyclebin\slider2.js"></script>
+    <script>
+        displayFirstGlider2(productArray);
+
+        function displayFirstGlider2(productArray) {
+            productArray.map(function(ele, ind) {
+                var div1 = document.createElement("div")
+                div1.setAttribute("class", "product-box2")
+                var div2 = document.createElement("div")
+                div2.setAttribute("class", "p-img-container2")
+
+                var div3 = document.createElement("div")
+                div3.setAttribute("class", "p-img2")
+                var a = document.createElement("a")
+                var img = document.createElement("img")
+                img.setAttribute("src", ele.img_url)
+
+
+                div4 = document.createElement("div")
+                div4.setAttribute("class", "p-box-text2")
+                var div5 = document.createElement("div")
+                div5.setAttribute("class", "product-category2")
+                var span = document.createElement("span")
+                var b = document.createElement("b")
+                var p1 = document.createElement("p")
+                var p2 = document.createElement("p")
+
+                b.innerText = ele.brand.toUpperCase()
+                p1.innerText = ele.desc
+                p2.innerText = ele.price
+
+                // console.log(b.innerText, p1.innerText, p2.innerText)
+                a.append(img)
+                div3.append(a)
+                div2.append(div3)
+
+                span.append(b)
+                div5.append(span)
+                p1.style.fontSize = 10;
+
+                div4.append(div5, p1, p2)
+                div1.append(div2, div4)
+                console.log(ind)
+
+                if (ind != 0)
+                    document.querySelector(".swiper-wrapper").append(div1)
+                    // div1.addEventListener("click", function() {
+                    //     gotoDetails(ele, ind);
+                    // })
+            })
+
+        }
+    </script>
+</body>
+
+</html>
