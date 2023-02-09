@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\glider.min.css">
     <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\navbar.css">
     <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\slidshow.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\css\slider2.css">
 </head>
 
 <body>
@@ -368,6 +371,47 @@
     </div>
 
 
+
+    <!-- Swiper2 -->
+    <div class="swiper">
+        <div class="product-slider-heading2">
+            <h1>NEW ARRIVALS</h1>
+        </div>
+        <div class="swiper-wrapper">
+
+            <!-- <div class="product-box2">
+                <div class="p-img-container2">
+                    <div class="p-img2">
+                        <a href="">
+                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="p-box-text2">
+                    <div class="product-category2">
+                        <span><b>BRAND</b></span>
+                    </div>
+                    <p>desc</p>
+                    <p>price</p>
+                </div>
+            </div> -->
+
+
+        </div>
+
+    </div>
+    <!-- Add Pagination -->
+
+
+    <!-- Add Arrows -->
+    <div class="swiper-button-next">
+
+    </div>
+    <div class="swiper-button-prev">
+
+    </div>
+    </div>
+
     <div id="heroProduct2">
         <div>
             <h3>VALENTINE'S DAY
@@ -625,4 +669,37 @@
         window.location.replace("file:///E:/bluemercury/BLUEMERCURY-CLONE/landingpage/event.html")
     }
 </script>
+
+<!-- Swiper JS2 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper2 -->
+<script>
+    let appendNumber = 50;
+    let prependNumber = 1;
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 8,
+        centeredSlides: true,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        virtual: {
+            slides: (function() {
+                const slides = [];
+                for (var i = 0; i < 50; i += 1) {
+                    slides.push("");
+                }
+                return slides;
+            })(),
+        },
+    });
+</script>
+
+
 <script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
