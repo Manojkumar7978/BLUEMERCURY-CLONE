@@ -1,0 +1,95 @@
+#wishListBox{
+    border: 1px solid blueviolet;
+    margin-top: 200px;
+    padding: 30px;
+    width: 55%;
+}
+#wishlistContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#wishlistContainer > div{
+    width: 100%;
+}
+
+#wishlistContainer > div > img{
+    width: 80%;
+    margin: auto;
+}
+
+#wishlistContainer > div > button{
+    margin-top: 60px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-color: rgb(119, 182, 184);
+    border: none;
+    border-radius: 20px;
+    background-color: yellow;
+}
+#wishlistContainer > div > button:hover{
+    background-color: teal;
+    cursor: pointer;
+}
+
+#myWishlist > a:first-child{
+    margin-right: 5px;
+}
+#myWishlist > i + a{
+    margin-left: 5px;
+}
+#myWishlist > a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #12284c;
+}
+#myWishlist{
+    color: #12284c;
+}
+
+
+#myAccount{
+    margin-top: 200px;
+    width: 35%;
+}
+
+#btn  > a{
+display: block;
+margin: 15px;
+height: 30px;
+width: 400px;
+font-size: 20px;
+cursor: pointer;
+color: gray;
+padding: 10px;
+text-decoration: none;
+border: 1px solid gray;
+} 
+
+#parentBox{
+    display: flex;
+}
+
+#userDetails{
+    display: flex;
+}
+.userIcon{
+    font-size: 50px;
+    border: none;
+    background-color: white;
+}
+.name > h3{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.name > h3 + a{
+    border: none;
+    text-decoration: underline;
+    background-color: white;
+    margin-left: 5px;
+    color: black;
+}
